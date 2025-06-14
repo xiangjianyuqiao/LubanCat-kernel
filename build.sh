@@ -15,6 +15,6 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  menuconfig
 
 echo $1 > .version
 
-time make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all)
+#time make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all)
 
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all) bindeb-pkg
+time make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc --all) bindeb-pkg
